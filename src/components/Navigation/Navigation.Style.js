@@ -1,5 +1,6 @@
 import styled from "styled-components";
-import {activeBar} from "utils/mixins";
+
+import { activeBar } from "utils/mixins";
 
 export const MenuItemGroup = styled.div`
    & > a {
@@ -13,6 +14,12 @@ export const MenuItemGroup = styled.div`
       ${activeBar(5)};
       ${({active}) => active ? "" : `&::before {height: 0;}`};
       opacity: ${({active}) => active ? 1 : 0.5};
+      
+      &:hover {
+         ::before {
+            height: 100%;
+         }
+      }
    }
 `;
 
@@ -28,10 +35,10 @@ export const MenuItems = styled.div`
 export const NavigationGroup = styled.nav`
    box-sizing: border-box;
    display: grid;
-   padding: 30px 0 0;
+   padding: 30px 0 15px;
    grid-template-rows: 88px 1fr;
    width: 99px;
-   height: 90vh;
+   height: 100%;
    background: ${({theme}) => theme.primaryColor};
    
    & > *:first-of-type {
