@@ -1,5 +1,6 @@
-import styled, {css} from "styled-components";
-import {circle} from "utils/mixins";
+import styled, { css } from "styled-components";
+
+import { circle } from "utils/mixins";
 
 const variants = {
    dot: css`

@@ -1,6 +1,6 @@
 import React from "react";
-import {Badge} from "./Badge";
 
+import { Badge } from "./Badge";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -8,9 +8,4 @@ export default {
    component: Badge,
 };
 
-const Template = (args) => <Badge {...args}/>;
-
-export const Default = Template.bind({});
-Default.args = {
-   count: 3,
-};
+export const Default = (args) => <Badge {...args}/>;
