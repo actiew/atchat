@@ -1,5 +1,7 @@
-import styled, {css} from "styled-components";
-import {circle} from "utils/mixins";
+import { ButtonGroup } from "components/Button/Button.Style";
+import styled, { css } from "styled-components";
+
+import { circle } from "utils/mixins";
 
 const circleMixinFunction = (color) => css`
    content: "";
@@ -12,6 +14,14 @@ const circleMixinFunction = (color) => css`
    ${circle(color)};
 `;
 
+export const AvatarImage = styled.img`
+   width: 100%;
+   height: 100%;
+   object-fit: cover;
+   object-position: center;
+   border-radius: 50%;
+`;
+
 export const AvatarGroup = styled.div`
    position: relative;
    width: ${({size}) => size}px;
@@ -19,21 +29,19 @@ export const AvatarGroup = styled.div`
    
    &::before {
       ${({status, theme}) => {
-   if (status === "online") {
+   if ( status === "online" ) {
       return circleMixinFunction(theme.greenColor);
-   } else if (status === "offline") {
+   } else if ( status === "offline" ) {
       return circleMixinFunction(theme.redColor);
    } else {
       return null;
    }
 }};
    }
-`;
-
-export const AvatarImage = styled.img`
-   width: 100%;
-   height: 100%;
-   object-fit: cover;
-   object-position: center;
-   border-radius: 50%;
+   
+   ${ButtonGroup} {
+      position: absolute;
+      right: 0;
+      bottom: 0;
+   }
 `;
