@@ -2,6 +2,7 @@
     to:
 src / components / <%= name %> / <%= name %> . Style . js
     - --
+
         import styled from "styled-components";
 
 export const < %=

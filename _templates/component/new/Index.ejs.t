@@ -2,6 +2,7 @@
     to:
 src / components / <%= name %> / <%= name %> . js
     - --
+
         import React from 'react';
 import PropTypes from 'prop-types';
 import {
@@ -12,7 +13,7 @@ import {
 export const < %=
 name %> = ({ children, ...rest}) => (
    <<%= name %>Group {...rest}>
-       {children}
+      {children}
    </<%= name %>Group>
 );
 
@@ -20,6 +21,4 @@ name %> = ({ children, ...rest}) => (
    children: PropTypes.any,
 };
 
-<%= name %>.defaultProps = {
-
-}
+<%= name %>.defaultProps = {}

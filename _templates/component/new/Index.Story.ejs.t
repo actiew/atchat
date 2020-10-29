@@ -2,6 +2,7 @@
     to:
 src / components / <%= name %> / <%= name %> . Story . js
     - --
+
         import React from "react";
 import {<%= name %>} from "./<%= name %>";
 
