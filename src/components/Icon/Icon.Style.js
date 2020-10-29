@@ -1,11 +1,12 @@
 import styled from "styled-components";
 
 export const IconGroup = styled.div`
-   display: inline-flex;
+   display: flex;
    align-items: center;
    justify-content: center;
-   width: ${({size}) => size}px;
-   height: ${({size}) => size}px;
+   width: ${({width}) => width};
+   height: ${({height}) => height};
+   cursor: pointer;
    
    svg,
    svg * {

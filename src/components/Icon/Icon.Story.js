@@ -1,8 +1,8 @@
 import React from "react";
 
-import {Icon} from "./Icon";
+import { ReactComponent as MessageIcon } from "resources/icon/message.svg";
 
-import {ReactComponent as MessageIcon} from "resources/icon/message.svg";
+import { Icon } from "./Icon";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -15,5 +15,6 @@ const Template = (args) => <Icon {...args}/>;
 export const Message = Template.bind({});
 Message.args = {
    icon: MessageIcon,
-   size: 86,
+   width: "86px",
+   height: "86px",
 };
