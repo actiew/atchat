@@ -1,4 +1,4 @@
-import {css} from "styled-components";
+import { css } from "styled-components";
 
 export const circle = (color) => css`
    border-radius: 50%;
@@ -14,5 +14,6 @@ export const activeBar = (width) => css`
       width: ${width}px;
       height: 100%;
       background: ${({theme}) => theme.redColor};
+      transition: 0.3s cubic-bezier(0.2, 1, 0.3, 1);
    }
 `;
