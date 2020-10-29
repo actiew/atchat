@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+    <title>compress</title>
+    <g id="compress" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="gg-compress-right" fill="#000000" fill-rule="nonzero">
+            <g id="Icon">
+                <g id="Icon-编组" transform="translate(4.166667, 4.166667)">
+                    <polygon id="Icon-路径" points="56.5291667 29.2916667 82.9583333 3.20833333 88.8125 9.1375 62.4666667 35.1375 77.3416667 35.2 77.3041667 43.5333333 48.1375 43.4166667 48.2541667 14.25 56.5875 14.2833333 56.5291667 29.2875"></polygon>
+                    <polygon id="Icon-路径" points="29.0791667 56.4291667 14.2041667 56.4416667 14.1958333 48.1083333 43.3625 48.0833333 43.3875 77.25 35.0541667 77.2583333 35.0416667 62.25 8.73333333 88.4583333 2.85416667 82.5583333 29.0791667 56.4291667"></polygon>
+                </g>
+                <rect id="Icon-矩形" fill-opacity="0" x="0" y="0" width="100" height="100"></rect>
+            </g>
+        </g>
+    </g>
+</svg>

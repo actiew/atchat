@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="74px" height="88px" viewBox="0 0 74 88" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+    <title>zip</title>
+    <defs>
+        <linearGradient x1="0%" y1="50.05%" x2="99.9710145%" y2="50.05%" id="linearGradient-1">
+            <stop stop-color="#4D4D4D" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="50%"></stop>
+            <stop stop-color="#4D4D4D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="49.95%" x2="99.9710145%" y2="49.95%" id="linearGradient-2">
+            <stop stop-color="#4D4D4D" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="50%"></stop>
+            <stop stop-color="#4D4D4D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="-0.106440141%" y1="49.9999775%" x2="99.9031068%" y2="49.9999775%" id="linearGradient-3">
+            <stop stop-color="#4D4D4D" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="50%"></stop>
+            <stop stop-color="#4D4D4D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0%" y1="50%" x2="100%" y2="50%" id="linearGradient-4">
+            <stop stop-color="#4D4D4D" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="50%"></stop>
+            <stop stop-color="#4D4D4D" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="0.0522762814%" y1="50.0069842%" x2="100.055826%" y2="50.0069842%" id="linearGradient-5">
+            <stop stop-color="#4D4D4D" offset="0%"></stop>
+            <stop stop-color="#FFFFFF" offset="50%"></stop>
+            <stop stop-color="#4D4D4D" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="zip" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="vscode-icons:file-type-zip" fill-rule="nonzero">
+            <g id="Icon">
+                <path d="M73.459375,80.459375 L73.459375,48.165625 L58.875,40.875 L58.875,0.25 L0.540625,0.25 L0.540625,87.75 L73.459375,87.75 L73.459375,80.459375 Z M58.875,80.459375 L58.875,51.9875 L66.165625,55.80625 L66.165625,80.459375 L58.875,80.459375 Z" id="Icon-形状" fill="#C09553"></path>
+                <polygon id="Icon-路径" fill="url(#linearGradient-1)" points="42.15625 73.871875 52.9375 73.871875 52.9375 76.975 42.15625 76.975"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-2)" points="42.15625 66.6875 52.9375 66.6875 52.9375 69.790625 42.15625 69.790625"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-2)" points="42.15625 59.5 52.9375 59.5 52.9375 62.603125 42.15625 62.603125"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-2)" points="42.15625 52.3125 52.9375 52.3125 52.9375 55.415625 42.15625 55.415625"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-1)" points="42.15625 45.125 52.9375 45.125 52.9375 48.228125 42.15625 48.228125"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-1)" points="42.15625 37.9375 52.9375 37.9375 52.9375 41.040625 42.15625 41.040625"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-1)" points="42.15625 30.75 52.9375 30.75 52.9375 33.853125 42.15625 33.853125"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-2)" points="42.15625 23.565625 52.9375 23.565625 52.9375 26.66875 42.15625 26.66875"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-2)" points="42.15625 16.378125 52.9375 16.378125 52.9375 19.48125 42.15625 19.48125"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-2)" points="37.740625 77.503125 48.521875 77.503125 48.521875 80.60625 37.740625 80.60625"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-1)" points="37.740625 70.315625 48.521875 70.315625 48.521875 73.41875 37.740625 73.41875"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-1)" points="37.740625 63.128125 48.521875 63.128125 48.521875 66.23125 37.740625 66.23125"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-1)" points="37.740625 55.940625 48.521875 55.940625 48.521875 59.04375 37.740625 59.04375"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-2)" points="37.740625 48.75625 48.521875 48.75625 48.521875 51.859375 37.740625 51.859375"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-1)" points="42.15625 81.059375 52.9375 81.059375 52.9375 84.1625 42.15625 84.1625"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-2)" points="37.740625 41.56875 48.521875 41.56875 48.521875 44.671875 37.740625 44.671875"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-1)" points="37.740625 34.38125 48.521875 34.38125 48.521875 37.484375 37.740625 37.484375"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-1)" points="37.740625 27.19375 48.521875 27.19375 48.521875 30.296875 37.740625 30.296875"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-1)" points="37.740625 20.00625 48.521875 20.00625 48.521875 23.109375 37.740625 23.109375"></polygon>
+                <polygon id="Icon-路径" fill="url(#linearGradient-2)" points="37.740625 84.68125 48.521875 84.68125 48.521875 87.784375 37.740625 87.784375"></polygon>
+                <path d="M49.8125,12.471875 C49.7726728,11.5523538 49.0203382,10.8247309 48.1,10.815625 L48.071875,10.815625 L48.071875,12.55625 L48.359375,12.55625 L49.003125,20.4125 L41.965625,20.4125 L42.625,12.55625 L42.91875,12.55625 L42.91875,10.815625 L42.78125,10.815625 C41.8608315,10.8232323 41.1085282,11.5521552 41.071875,12.471875 L40.090625,45.5 C40.0753156,45.9359222 40.2382966,46.3592618 40.5419767,46.6723767 C40.8456568,46.9854915 41.2638135,47.1613443 41.7,47.1593914 L49.3,47.1593914 C49.735379,47.1605253 50.1524259,46.9842017 50.4549335,46.6710798 C50.7574411,46.3579579 50.9192832,45.9350806 50.903125,45.5 L49.8125,12.471875 Z M45.4875,45.284375 C43.466483,45.284375 41.828125,43.646017 41.828125,41.625 C41.828125,39.603983 43.466483,37.965625 45.4875,37.965625 C47.508517,37.965625 49.146875,39.603983 49.146875,41.625 C49.1417067,43.6423549 47.5048615,45.2750066 45.4875,45.275 L45.4875,45.284375 Z" id="Icon-形状" fill="url(#linearGradient-3)"></path>
+                <polygon id="Icon-路径" fill="url(#linearGradient-4)" points="43.55 5.88125 47.425 5.88125 47.425 15.425 43.55 15.425"></polygon>
+                <path d="M53.875,8.25 C53.875,3.85070679 50.3086682,0.284375 45.909375,0.284375 L45.046875,0.284375 C42.5186457,0.28557609 40.1409852,1.48644043 38.6394763,3.52050429 C37.1379673,5.55456815 36.6907778,8.18047104 37.434375,10.596875 L37.434375,10.615625 C38.1372545,13.2216725 38.4127073,15.9244877 38.25,18.61875 C38.3475743,20.160626 39.0712632,21.5955847 40.253125,22.590625 L40.59375,11.8375 C40.6632587,10.8571432 41.4860327,10.1015624 42.46875,10.115625 L42.890625,10.115625 L42.890625,5.209375 L48.05625,5.209375 L48.05625,10.115625 L48.36875,10.115625 C49.353309,10.1041363 50.1790309,10.8561574 50.259375,11.8375 L50.6375,22.65625 C51.8640031,21.6595963 52.6184809,20.1959546 52.71875,18.61875 L52.71875,18.375 L52.71875,18.246875 L52.71875,18.125 C52.5821964,15.6443626 52.8309833,13.1575481 53.45625,10.753125 C53.7290251,9.9465701 53.870411,9.10142 53.875,8.25 L53.875,8.25 Z" id="Icon-路径" fill="url(#linearGradient-5)"></path>
+            </g>
+        </g>
+    </g>
+</svg>

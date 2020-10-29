@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="100px" height="150px" viewBox="0 0 100 150" version="1.1"
+     xmlns="http://www.w3.org/2000/svg">
+    <title>bubble</title>
+    <g id="bubble" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <path d="M100,0 L100,150 L0,150 L0.00179005591,148.71481 C29.2190321,113.245247 48.3283707,59.9800104 49.8956352,0.0017751228 L100,0 Z" id="形状结合" fill="#000000" transform="translate(50.000000, 75.000000) scale(1, -1) translate(-50.000000, -75.000000) "></path>
+    </g>
+</svg>
