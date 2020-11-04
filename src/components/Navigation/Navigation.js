@@ -23,19 +23,19 @@ export const Navigation = ({...rest}) => (
    <NavigationGroup {...rest}>
       <Avatar src={CommunityAvatar} status={"online"}/>
       <MenuItems>
-         <MenuItem to="/project/atchat" showBadge icon={Message}/>
-         <MenuItem to="/project/atchat/contact" icon={People}/>
-         <MenuItem to="/project/atchat/file" icon={Folder}/>
-         <MenuItem to="/project/atchat/note" icon={StickyNote}/>
-         <MenuItem icon={More}/>
-         <MenuItem to="/project/atchat/setting" icon={Config}/>
+         <MenuItem to="/" showBadge icon={Message}/>
+         <MenuItem to="/contact" icon={People}/>
+         <MenuItem to="/file" icon={Folder}/>
+         <MenuItem to="/note" icon={StickyNote}/>
+         <MenuItem to="/more" icon={More}/>
+         <MenuItem to="/setting" icon={Config}/>
       </MenuItems>
    </NavigationGroup>
 );
 
 export function MenuItem({to, icon, showBadge, ...rest}) {
    let location = useLocation();
-   let active = !!matchPath(location.pathname, {path: to, exact: to === "/project/atchat"});
+   let active = !!matchPath(location.pathname, {path: to, exact: to === "/"});
    
    return (
       <MenuItemGroup active={active} {...rest}>

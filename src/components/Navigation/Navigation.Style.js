@@ -13,12 +13,10 @@ export const MenuItemGroup = styled.div`
       
       ${activeBar(5)};
       ${({active}) => active ? "" : `&::before {height: 0;}`};
-      opacity: ${({active}) => active ? 1 : 0.5};
+      opacity: ${({active}) => active ? 1 : 0.7};
       
       &:hover {
-         ::before {
-            height: 100%;
-         }
+         opacity: 1;
       }
    }
 `;
