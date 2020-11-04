@@ -54,15 +54,15 @@ export function EditProfile({children, ...rest}) {
                </SelectGroups>
             </LabelContainer>
             <InputText label={"签 名"} placeholder={"签 名"}/>
-            
+   
             <TitleGroup>联系信息</TitleGroup>
             <InputText label={"电 话"} placeholder={"电 话"}/>
             <InputText label={"邮 箱"} placeholder={"邮 箱"}/>
             <InputText label={"网 站"} placeholder={"网 站"}/>
-            
+   
             <TitleGroup>社交信息</TitleGroup>
-            <InputText label={"钉 钉"} placeholder={"钉 钉"}/>
-            <InputText label={"飞 书"} placeholder={"飞 书"}/>
+            <InputText label={"钉钉"} placeholder={"钉 钉"}/>
+            <InputText label={"飞书"} placeholder={"飞 书"}/>
             <InputText label={"QQ"} placeholder={"QQ"}/>
          </InformationGroup>
          <ButtonGroups>

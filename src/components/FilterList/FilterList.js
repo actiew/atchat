@@ -11,7 +11,7 @@ import React from "react";
 
 import { ReactComponent as Plus } from "resources/icon/plus.svg";
 
-export function FilterList({children, options, filterLabel, actionLabel, ...rest}) {
+export function FilterList ({children, options, filterLabel, actionLabel, ...rest}) {
    
    return (
       <FilterListGroup {...rest}>
@@ -19,17 +19,17 @@ export function FilterList({children, options, filterLabel, actionLabel, ...rest
          <Filter style={{padding: "9px 0"}}>
             {options &&
             <FilterOptions label={filterLabel}>
-                  <Select>
-                     {options.map((option, index) => <Option key={index}>{option}</Option>)}
-                  </Select>
-               </FilterOptions>
+               <Select>
+                  {options.map((option, index) => <Option key={index}>{option}</Option>)}
+               </Select>
+            </FilterOptions>
             }
             {actionLabel &&
             <ActionOptions label={actionLabel}>
-                  <Button shape={"circle"}>
-                     <Icon icon={Plus} width={"10px"} height={"10px"} color="#FFF"/>
-                  </Button>
-               </ActionOptions>
+               <Button shape={"circle"}>
+                  <Icon icon={Plus} width={"10px"} height={"10px"} color="#FFF"/>
+               </Button>
+            </ActionOptions>
             }
          </Filter>
          {children}

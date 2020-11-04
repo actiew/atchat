@@ -14,8 +14,9 @@ import PropTypes from "prop-types";
 import React, { useState } from "react";
 import { Route, Switch, useLocation } from "react-router-dom";
 import { animated, useTransition } from "react-spring";
+import { MoreList } from "../MoreList/MoreList";
 
-export function ChatApp({children, ...rest}) {
+export function ChatApp ({children, ...rest}) {
    const [showDrawer, setShowDrawer] = useState(false);
    const [videoCalling, setVideoCalling] = useState(false);
    let location = useLocation();
@@ -35,19 +36,22 @@ export function ChatApp({children, ...rest}) {
             {transitions.map(({item: location, props, key}) => (
                <animated.div key={key} style={props}>
                   <Switch location={location}>
-                     <Route exact path="/project/atchat/">
+                     <Route exact path="/">
                         <MessageList/>
                      </Route>
-                     <Route exact path="/project/atchat/contact">
+                     <Route exact path="/contact">
                         <ContactList/>
                      </Route>
-                     <Route exact path="/project/atchat/file">
+                     <Route exact path="/file">
                         <FileList/>
                      </Route>
-                     <Route exact path="/project/atchat/note">
+                     <Route exact path="/note">
                         <NoteList/>
                      </Route>
-                     <Route path="/project/atchat/setting">
+                     <Route exact path="/more">
+                        <MoreList/>
+                     </Route>
+                     <Route path="/setting">
                         <EditProfile/>
                      </Route>
                   </Switch>
@@ -57,10 +61,10 @@ export function ChatApp({children, ...rest}) {
          <Content>
             {videoCalling && <VideoCall onHangOffClicked={() => setVideoCalling(false)}/>}
             <Switch>
-               <Route exact path={"/project/atchat/setting"}>
+               <Route exact path={"/setting"}>
                   <Setting/>
                </Route>
-               <Route exact path={"/project/atchat/setting/blocked"}>
+               <Route exact path={"/setting/blocked"}>
                   <BlockedList/>
                </Route>
                <Route path={"/"}>

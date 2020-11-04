@@ -14,6 +14,6 @@ export const activeBar = (width) => css`
       width: ${width}px;
       height: 100%;
       background: ${({theme}) => theme.redColor};
-      transition: 0.3s cubic-bezier(0.2, 1, 0.3, 1);
+      transition: 0.5s cubic-bezier(0.2, 1, 0.3, 1);
    }
 `;

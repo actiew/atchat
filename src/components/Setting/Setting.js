@@ -37,7 +37,7 @@ export function Setting({children, type, label, description, ...rest}) {
                <SettingItem label={"视频电话通知"} type={"switch"}/>
                <SettingItem label={"显示通知内容"} type={"switch"}/>
                <SettingItem label={"消息通知声音"} type={"switch"}/>
-               <Link to={"/project/atchat/setting/blocked"}>
+               <Link to={"/setting/blocked"}>
                   <SettingItem label={"查看屏蔽好友"} type={"menu"}/>
                </Link>
             </Settinggroup>
