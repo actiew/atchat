@@ -6,7 +6,7 @@ module.exports = {
    trailingComma: "none",
    jsxBracketSameLine: true,
    tabWidth: 3, // 缩进字节数
-   useTabs: true, // 缩进不使用tab，使用空格
+   useTabs: false, // 缩进不使用tab，使用空格
    semi: true, // 句尾添加分号
    singleQuote: false, // 使用单引号代替双引号
    proseWrap: "preserve", // 默认值。因为使用了一些折行敏感型的渲染器（如GitHub comment）而按照markdown文本样式进行折行
@@ -19,7 +19,7 @@ module.exports = {
    jsxSingleQuote: false, // 在jsx中使用单引号代替双引号
    //parser: 'babylon', // 格式化的解析器，默认是babylon
    //requireConfig: false, // Require a 'prettierconfig' to format prettier
-   //stylelintIntegration: false, //不让prettier使用stylelint的代码格式进行校验
+   stylelintIntegration: false, //不让prettier使用stylelint的代码格式进行校验
    //trailingComma: 'es5', // 在对象或数组最后一个元素后面是否加逗号（在ES5中加尾逗号）
    //tslintIntegration: false, // 不让prettier使用tslint的代码格式进行校验
 };

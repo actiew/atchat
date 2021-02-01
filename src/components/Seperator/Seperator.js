@@ -1,8 +1,12 @@
-import { SeperatorGroup } from "components/Seperator/Seperator.Style";
 import PropTypes from "prop-types";
 import React from "react";
+import { SeperatorGroup } from "src/components/Seperator/Seperator.Style";
 
-export const Seperator = ({children, ...rest}) => (
+
+export const Seperator = ({
+   children,
+   ...rest
+}) => (
    <SeperatorGroup {...rest}>
       {children}
    </SeperatorGroup>

@@ -1,29 +1,40 @@
-import { Button } from "components/Button/Button";
-import { Icon } from "components/Icon/Icon";
 import PropTypes from "prop-types";
 import React from "react";
+import { Button } from "src/components/Button/Button";
+import { Icon } from "src/components/Icon/Icon";
 
-import theme from "theme";
+import { whitestColor } from "src/theme/theme";
 
-export const SocialIcon = ({icon, backgroundColor, href, alt}) => (
+
+export const SocialIcon = ({
+   icon,
+   backgroundColor,
+   href,
+   alt,
+}) => (
    <>
       <Button
-         shape={"circle"}
-         width={"45px"}
-         height={"45px"}
+         shape="circle"
+         width="45px"
+         height="45px"
          backgroundColor={backgroundColor}
          onClick={() => href && window.open(href, "_back")}
          alt={alt}
       >
-         <Icon icon={icon} color={theme.whiteColor} width={"29px"}/>
+         <Icon
+            icon={icon}
+            color={whitestColor}
+            width="29px"
+         />
       </Button>
    </>
 );
 
 SocialIcon.propTypes = {
-   icon: PropTypes.elementType,
+   alt: PropTypes.any,
    backgroundColor: PropTypes.string,
    href: PropTypes.string,
+   icon: PropTypes.any,
 };
 
 SocialIcon.defaultProps = {};

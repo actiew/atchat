@@ -1,38 +1,44 @@
-import { ContactCard } from "components/ContactCard/ContactCard";
-import { ContactListGroup, Contacts } from "components/ContactList/ContactList.Style";
-import { FilterList } from "components/FilterList/FilterList";
-
-import contactData from "data/contacts";
-
-import useStaggeredList from "hooks/useStaggered";
-import PropTypes from "prop-types";
 import React from "react";
 import { animated } from "react-spring";
+import { ContactCard } from "src/components/ContactCard/ContactCard";
+import { ContactListGroup, Contacts } from "src/components/ContactList/ContactList.Style";
+import { FilterList } from "src/components/FilterList/FilterList";
 
-export function ContactList({children, ...rest}) {
+import useStaggeredList from "src/hooks/useStaggered";
+import { useData } from "src/utils/mixins";
+
+
+export function ContactList ({
+   ...rest
+}) {
    const trailAnimes = useStaggeredList(12);
-   
+
+   const contacts = useData("contacts");
+
    return (
       <ContactListGroup {...rest}>
          <FilterList
             options={["最新添加", "昵称优先"]}
             filterLabel={"列表排序"}
             actionLabel={"添加好友"}
-         >
-            <Contacts>
-               {contactData.map((contact, item) => (
-                  <animated.div key={item + contact.id} style={trailAnimes[item]}>
-                     <ContactCard key={contact.id} contact={contact}/>
-                  </animated.div>
-               ))}
-            </Contacts>
-         </FilterList>
+         />
+         <Contacts>
+            {contacts.map((contact, item) => (
+               <animated.div
+                  key={item + contact.id}
+                  style={trailAnimes[item]}
+               >
+                  <ContactCard
+                     key={contact.id}
+                     contact={contact}
+                  />
+               </animated.div>
+            ))}
+         </Contacts>
       </ContactListGroup>
    );
 }
 
-ContactList.propTypes = {
-   children: PropTypes.any,
-};
+ContactList.propTypes = {};
 
 ContactList.defaultProps = {};

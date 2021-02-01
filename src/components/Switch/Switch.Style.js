@@ -1,4 +1,6 @@
+import { blackerColor, greenColor, whitestColor } from "src/theme/theme";
 import styled from "styled-components";
+
 
 export const Slider = styled.span`
    position: absolute;
@@ -7,8 +9,8 @@ export const Slider = styled.span`
    right: 0;
    bottom: 0;
    border-radius: 17px;
-   background: ${({theme}) => theme.grayColor};
-   
+   background: ${blackerColor};
+
    &::before {
       display: block;
       content: "";
@@ -17,24 +19,25 @@ export const Slider = styled.span`
       left: 3px;
       width: 30px;
       height: 30px;
-      background: ${({theme}) => theme.whiteColor};
+      background: ${whitestColor};
       border-radius: 50%;
       transition: 0.4s ease-in-out;
    }
 `;
 
-export const Checkbox = styled.input.attrs({type: "checkbox"})`
+export const Checkbox = styled.input.attrs({ type: "checkbox" })`
    width: 0;
    height: 0;
    opacity: 0;
-   
+
    :checked + ${Slider} {
-      background: ${({theme}) => theme.greenColor};
-      
+      background: ${greenColor};
+
       ::before {
-          transform: translateX(30px);
+         transform: translateX(30px);
       }
-   }}
+   }
+}
 `;
 
 export const SwitchGroup = styled.label`

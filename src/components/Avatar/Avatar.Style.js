@@ -1,16 +1,18 @@
-import { ButtonGroup } from "components/Button/Button.Style";
+import { ButtonGroup } from "src/components/Button/Button.Style";
+import { greenColor, redColor } from "src/theme/theme";
+
+import { circle } from "src/utils/mixins";
 import styled, { css } from "styled-components";
 
-import { circle } from "utils/mixins";
 
-const circleMixinFunction = (color) => css`
+const circleMixinFunction = color => css`
    content: "";
    display: inline-block;
    position: absolute;
-   right: ${({size}) => (size / 40)}px;
-   bottom: ${({size}) => (size / 40)}px;
-   width: ${({size}) => size / 4}px;
-   height: ${({size}) => size / 4}px;
+   right: ${({ size }) => (size / 40)}px;
+   bottom: ${({ size }) => (size / 40)}px;
+   width: ${({ size }) => size / 4}px;
+   height: ${({ size }) => size / 4}px;
    ${circle(color)};
 `;
 
@@ -24,21 +26,21 @@ export const AvatarImage = styled.img`
 
 export const AvatarGroup = styled.div`
    position: relative;
-   width: ${({size}) => size}px;
-   height: ${({size}) => size}px;
-   
+   width: ${({ size }) => size}px;
+   height: ${({ size }) => size}px;
+
    &::before {
-      ${({status, theme}) => {
-   if ( status === "online" ) {
-      return circleMixinFunction(theme.greenColor);
-   } else if ( status === "offline" ) {
-      return circleMixinFunction(theme.redColor);
-   } else {
-      return null;
+      ${({ status }) => {
+         if (status === "online") {
+            return circleMixinFunction(greenColor);
+         } else if (status === "offline") {
+            return circleMixinFunction(redColor);
+         } else {
+            return null;
+         }
+      }};
    }
-}};
-   }
-   
+
    ${ButtonGroup} {
       position: absolute;
       right: 0;

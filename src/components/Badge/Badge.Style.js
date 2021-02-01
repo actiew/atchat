@@ -1,44 +1,51 @@
+import { redColor, whitestColor } from "src/theme/theme";
+
+import { circle } from "src/utils/mixins";
 import styled, { css } from "styled-components";
 
-import { circle } from "utils/mixins";
 
 const variants = {
    dot: css`
       position: relative;
       padding: 6px;
-      
+
       &::before {
          content: "";
-         display: ${({isShow}) => isShow ? "block" : "none"};
+         display: ${({ isShow }) => isShow
+            ? "block"
+            : "none"};
          position: absolute;
          top: 0;
          right: 0;
          width: 9px;
          height: 9px;
-         ${({theme}) => circle(theme.redColor)};
+         ${circle(redColor)};
       }
    `,
-   
+
    default: css`
       display: flex;
       align-items: center;
       justify-content: center;
       width: 26px;
       height: 26px;
-      ${({theme}) => circle(theme.redColor)};
-      ${({count, showZero}) => !showZero && count === 0 && `visibility: hidden`};
+      ${circle(redColor)};
+      ${({
+         count,
+         showZero,
+      }) => !showZero && count === 0 && `visibility: hidden`};
    `,
 };
 
 export const Count = styled.span`
-   color: ${({theme}) => theme.whiteColor};
+   color: ${whitestColor};
    font-size: 16px;
-   font-weight: 500;
+   font-weight: 700;
 `;
 
 export const BadgeGroup = styled.div`
    display: inline-flex;
    align-items: center;
    justify-content: center;
-   ${({variant}) => variants[variant]};
+   ${({ variant }) => variants[variant]};
 `;

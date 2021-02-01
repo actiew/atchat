@@ -1,8 +1,7 @@
-import { Icon } from "components/Icon/Icon";
 import React from "react";
-import { ReactComponent as Plus } from "resources/icon/plus.svg";
-
-import theme from "theme";
+import { Icon } from "src/components/Icon/Icon";
+import { ReactComponent as Plus } from "src/resources/icon/plus.svg";
+import { whitestColor } from "src/theme/theme";
 import { Button } from "./Button";
 
 // eslint-disable-next-line import/no-anonymous-default-export
@@ -11,10 +10,15 @@ export default {
    component: Button,
 };
 
-export const Rect = () => <Button shape={"rect"}>按钮</Button>;
+export const Rect = () => <Button shape="rect">按钮</Button>;
 
 export const Circle = () => (
    <Button>
-      <Icon icon={Plus} color={theme.whiteColor} width={"12px"} height={"12px"}/>
+      <Icon
+         icon={Plus}
+         color={whitestColor}
+         width="12px"
+         height="12px"
+      />
    </Button>
 );

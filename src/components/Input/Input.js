@@ -1,11 +1,21 @@
-import { InputContainer, InputGroup, Prefix, Suffix } from "components/Input/Input.Style";
 import PropTypes from "prop-types";
 import React from "react";
+import { InputContainer, InputGroup, Prefix, Suffix } from "src/components/Input/Input.Style";
 
-export const Input = ({children, placeholder, prefix, suffix, ...rest}) => (
+
+export const Input = ({
+   type,
+   placeholder,
+   prefix,
+   suffix,
+   ...rest
+}) => (
    <InputGroup {...rest}>
       {prefix && <Prefix>{prefix}</Prefix>}
-      <InputContainer placeholder={placeholder}/>
+      <InputContainer
+         type={type}
+         placeholder={placeholder}
+      />
       {suffix && <Suffix>{suffix}</Suffix>}
    </InputGroup>
 );
@@ -14,6 +24,7 @@ Input.propTypes = {
    placeholder: PropTypes.string,
    prefix: PropTypes.any,
    suffix: PropTypes.any,
+   type: PropTypes.any,
 };
 
 Input.defaultProps = {

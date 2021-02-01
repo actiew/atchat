@@ -8,4 +8,4 @@ export default {
    component: LabelContainer,
 };
 
-export const Default = (args) => <LabelContainer {...args}/>;
+export const Default = args => <LabelContainer {...args}/>;

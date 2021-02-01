@@ -1,8 +1,8 @@
 import React from "react";
 
-import {Avatar} from "./Avatar";
+import avatar001 from "src/resources/images/avatar001.png";
 
-import avatar001 from "resources/images/avatar001.png";
+import { Avatar } from "./Avatar";
 
 // eslint-disable-next-line import/no-anonymous-default-export
 export default {
@@ -10,7 +10,7 @@ export default {
    component: Avatar,
 };
 
-const Template = (args) => <Avatar {...args}/>;
+const Template = args => <Avatar {...args}/>;
 
 export const Default = Template.bind({});
 Default.args = {

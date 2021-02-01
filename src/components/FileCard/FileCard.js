@@ -1,3 +1,5 @@
+import PropTypes from "prop-types";
+import React from "react";
 import {
    FileCardGroup,
    FileIcon,
@@ -5,19 +7,18 @@ import {
    FileSize,
    Options,
    Time,
-} from "components/FileCard/FileCard.Style";
+} from "src/components/FileCard/FileCard.Style";
 
-import { Icon } from "components/Icon/Icon";
-import PropTypes from "prop-types";
-import React from "react";
-import { ReactComponent as DotIcon } from "resources/icon/dot.svg";
-import { ReactComponent as ExcelIcon } from "resources/icon/excel.svg";
-import { ReactComponent as ImageIcon } from "resources/icon/image.svg";
-import { ReactComponent as PdfIcon } from "resources/icon/pdf.svg";
-import { ReactComponent as PowerPointIcon } from "resources/icon/powerpoint.svg";
-import { ReactComponent as WordIcon } from "resources/icon/word.svg";
+import { Icon } from "src/components/Icon/Icon";
+import { ReactComponent as DotIcon } from "src/resources/icon/dot.svg";
+import { ReactComponent as ExcelIcon } from "src/resources/icon/excel.svg";
+import { ReactComponent as ImageIcon } from "src/resources/icon/image.svg";
+import { ReactComponent as PdfIcon } from "src/resources/icon/pdf.svg";
+import { ReactComponent as PowerPointIcon } from "src/resources/icon/powerpoint.svg";
+import { ReactComponent as WordIcon } from "src/resources/icon/word.svg";
 
-import { ReactComponent as ZipIcon } from "resources/icon/zip.svg";
+import { ReactComponent as ZipIcon } from "src/resources/icon/zip.svg";
+
 
 const fileIcon = {
    zip: ZipIcon,
@@ -28,20 +29,27 @@ const fileIcon = {
    image: ImageIcon,
 };
 
-export const FileCard = ({children, file, ...rest}) => (
+export const FileCard = ({
+   file,
+   ...rest
+}) => (
    <FileCardGroup {...rest}>
       <FileIcon icon={fileIcon[file.type]}/>
       <FileName>{file.name}</FileName>
       <FileSize>{file.size}</FileSize>
       <Options>
-         <Icon icon={DotIcon} opacity={0.8} height={"18px"}/>
+         <Icon
+            icon={DotIcon}
+            opacity={0.8}
+            height="18px"
+         />
       </Options>
       <Time>{file.updatedAt}</Time>
    </FileCardGroup>
 );
 
 FileCard.propTypes = {
-   children: PropTypes.any,
+   file: PropTypes.any,
 };
 
 FileCard.defaultProps = {};

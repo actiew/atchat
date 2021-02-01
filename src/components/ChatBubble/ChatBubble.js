@@ -1,20 +1,31 @@
+import PropTypes from "prop-types";
+import React from "react";
 import {
    Bubble,
    BubbleTip,
    ChatBubbleGroup,
    MessageText,
    Time,
-} from "components/ChatBubble/ChatBubble.Style";
-import PropTypes from "prop-types";
-import React from "react";
+} from "src/components/ChatBubble/ChatBubble.Style";
 
-import { ReactComponent as BubbleTipIcon } from "resources/icon/bubble.svg";
+import { ReactComponent as BubbleTipIcon } from "src/resources/icon/bubble.svg";
 
-export const ChatBubble = ({children, type, time, ...rest}) => (
+
+export const ChatBubble = ({
+   children,
+   type,
+   time,
+   ...rest
+}) => (
    <ChatBubbleGroup type={type} {...rest}>
       <Time>{time}</Time>
       <Bubble>
-         <BubbleTip icon={BubbleTipIcon} width={"12px"} height={"18px"} color={"#AAA"}/>
+         <BubbleTip
+            icon={BubbleTipIcon}
+            width="12px"
+            height="18px"
+            color="#AAAAAA"
+         />
          <MessageText>{children}</MessageText>
       </Bubble>
    </ChatBubbleGroup>
@@ -22,6 +33,8 @@ export const ChatBubble = ({children, type, time, ...rest}) => (
 
 ChatBubble.propTypes = {
    children: PropTypes.any,
+   time: PropTypes.any,
+   type: PropTypes.oneOf(["mine"]),
 };
 
 ChatBubble.defaultProps = {};

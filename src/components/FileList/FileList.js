@@ -1,38 +1,44 @@
-import { FileCard } from "components/FileCard/FileCard";
-import { FileListGroup, Files } from "components/FileList/FileList.Style";
-import { FilterList } from "components/FilterList/FilterList";
-
-import fileData from "data/files";
-
-import useStaggeredList from "hooks/useStaggered";
-import PropTypes from "prop-types";
 import React from "react";
 import { animated } from "react-spring";
+import { FileCard } from "src/components/FileCard/FileCard";
+import { FileListGroup, Files } from "src/components/FileList/FileList.Style";
+import { FilterList } from "src/components/FilterList/FilterList";
 
-export function FileList({children, ...rest}) {
+import useStaggeredList from "src/hooks/useStaggered";
+import { useData } from "src/utils/mixins";
+
+
+export function FileList ({
+   ...rest
+}) {
    const trailAnimes = useStaggeredList(9);
-   
+
+   const files = useData("files");
+
    return (
       <FileListGroup {...rest}>
          <FilterList
             options={["最新文件", "文件名称"]}
-            filterLabel={"列表排序"}
-            actionLabel={"添加文件"}
-         >
-            <Files>
-               {fileData.map((file, item) => (
-                  <animated.div key={item + file.id} style={trailAnimes[item]}>
-                     <FileCard key={file.id} file={file}/>
-                  </animated.div>
-               ))}
-            </Files>
-         </FilterList>
+            filterLabel="列表排序"
+            actionLabel="添加文件"
+         />
+         <Files>
+            {files.map((file, item) => (
+               <animated.div
+                  key={item + file.id}
+                  style={trailAnimes[item]}
+               >
+                  <FileCard
+                     key={file.id}
+                     file={file}
+                  />
+               </animated.div>
+            ))}
+         </Files>
       </FileListGroup>
    );
 }
 
-FileList.propTypes = {
-   children: PropTypes.any,
-};
+FileList.propTypes = {};
 
 FileList.defaultProps = {};

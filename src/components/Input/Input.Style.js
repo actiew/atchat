@@ -1,18 +1,24 @@
+import { blackColor, blackestColor, whitestColor } from "src/theme/theme";
 import styled from "styled-components";
+
 
 export const InputContainer = styled.input`
    padding: 6px 15px;
    width: 100%;
    height: 40px;
-   color: ${({theme}) => theme.grayColor};
+   color: ${blackColor};
    font-size: 18px;
    outline: none;
    border-radius: 24px;
    border: none;
-   background: ${({theme}) => theme.lineColor};
-   
+   background: ${whitestColor};
+
    &:focus {
-      color: ${({theme}) => theme.normalColor};
+      color: ${blackestColor};
+   }
+
+   &::-webkit-search-cancel-button {
+      display: none;
    }
 `;
 
@@ -20,7 +26,7 @@ export const Suffix = styled.div`
    display: flex;
    align-items: center;
    justify-content: center;
-   
+
    & > * {
       margin: 0 6px;
    }

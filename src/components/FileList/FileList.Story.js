@@ -8,4 +8,4 @@ export default {
    component: FileList,
 };
 
-export const Default = (args) => <FileList {...args}/>;
+export const Default = args => <FileList {...args}/>;

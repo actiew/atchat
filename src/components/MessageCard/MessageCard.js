@@ -1,4 +1,6 @@
-import { Avatar } from "components/Avatar/Avatar";
+import PropTypes from "prop-types";
+import React from "react";
+import { Avatar } from "src/components/Avatar/Avatar";
 import {
    Message,
    MessageCardGroup,
@@ -6,13 +8,26 @@ import {
    Name,
    Time,
    UnreadBadge,
-} from "components/MessageCard/MessageCard.Style";
-import PropTypes from "prop-types";
-import React from "react";
+} from "src/components/MessageCard/MessageCard.Style";
 
-export const MessageCard = ({children, avatarSrc, avatarStatus, name, time, message, unreadCount, active, ...rest}) => (
+
+export const MessageCard = ({
+   children,
+   avatarSrc,
+   avatarStatus,
+   name,
+   time,
+   message,
+   unreadCount,
+   active,
+   ...rest
+}) => (
    <MessageCardGroup active={active} {...rest}>
-      <Avatar size={72} status={avatarStatus} src={avatarSrc}/>
+      <Avatar
+         size={72}
+         status={avatarStatus}
+         src={avatarSrc}
+      />
       <Name>{name}</Name>
       <Time>{time}</Time>
       <Message>
@@ -22,15 +37,15 @@ export const MessageCard = ({children, avatarSrc, avatarStatus, name, time, mess
    </MessageCardGroup>);
 
 MessageCard.propTypes = {
-   children: PropTypes.any,
+   active: PropTypes.bool,
    avatarSrc: PropTypes.string.isRequired,
    avatarStatus: PropTypes.any,
-   name: PropTypes.any,
-   time: PropTypes.any,
+   children: PropTypes.any,
    message: PropTypes.any,
-   unreadCount: PropTypes.number,
-   active: PropTypes.bool,
+   name: PropTypes.any,
    replied: PropTypes.bool,
-};
+   time: PropTypes.any,
+   unreadCount: PropTypes.number
+}
 
 MessageCard.defaultProps = {};

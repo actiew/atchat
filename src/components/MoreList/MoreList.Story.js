@@ -8,4 +8,4 @@ export default {
    component: MoreList,
 };
 
-export const Default = (args) => <MoreList {...args}/>;
+export const Default = args => <MoreList {...args}/>;

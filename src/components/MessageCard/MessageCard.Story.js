@@ -1,6 +1,6 @@
 import React from "react";
 
-import Avatar001 from "resources/images/avatar001.png";
+import Avatar001 from "src/resources/images/avatar001.png";
 
 import { MessageCard } from "./MessageCard";
 

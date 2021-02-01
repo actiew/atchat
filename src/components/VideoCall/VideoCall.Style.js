@@ -1,9 +1,11 @@
-import { Avatar } from "components/Avatar/Avatar";
-import { AvatarGroup } from "components/Avatar/Avatar.Style";
-import { Button } from "components/Button/Button";
-import { IconGroup } from "components/Icon/Icon.Style";
-import { ParagraphGroup } from "components/Paragraph/Paragraph.Style";
+import { Avatar } from "src/components/Avatar/Avatar";
+import { AvatarGroup } from "src/components/Avatar/Avatar.Style";
+import { Button } from "src/components/Button/Button";
+import { IconGroup } from "src/components/Icon/Icon.Style";
+import { ParagraphGroup } from "src/components/Paragraph/Paragraph.Style";
+import { greenColor, whiterColor, whitestColor } from "src/theme/theme";
 import styled from "styled-components";
+
 
 export const Actions = styled.div`
    display: grid;
@@ -13,8 +15,13 @@ export const Actions = styled.div`
    justify-self: center;
 `;
 
-export const Action = styled(Button).attrs({shape: "circle", width: "64px", height: "64px"})`
-   color: ${({theme}) => theme.whiteColor};
+export const Action = styled(Button)
+.attrs({
+   shape: "circle",
+   width: "64px",
+   height: "64px",
+})`
+   color: ${whitestColor};
    font-size: 32px;
 `;
 
@@ -40,28 +47,29 @@ export const VideoCallAlert = styled.div`
    column-gap: 9px;
    align-items: center;
    position: absolute;
-   top: 9vh;
-   right: 1vw;
+   top: 12vh;
+   right: 0;
    padding: 12px 6px;
    width: max-content;
    border-radius: 3px;
-   background: ${({theme}) => theme.darkColor};
+   background: ${greenColor};
    cursor: pointer;
    z-index: 999;
-   
+
    ${AvatarGroup} {
       grid-area: avatar;
    }
-   
+
    ${ParagraphGroup} {
       grid-area: info;
    }
-   
+
    ${ParagraphGroup}[type="normal"] {
       grid-area: action;
       align-self: end;
+      color: ${whiterColor};
    }
-   
+
    ${IconGroup} {
       grid-area: icon;
       align-self: end;
@@ -75,6 +83,6 @@ export const VideoCallGroup = styled.div`
    grid-template-areas: "title title" "self self" "actions actions";
    padding: 9px 9px 45px;
    height: 100%;
-   background: url(${({src}) => src}) center;
+   background: url(${({ src }) => src}) center;
    background-size: cover;
 `;

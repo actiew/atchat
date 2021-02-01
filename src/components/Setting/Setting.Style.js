@@ -1,5 +1,6 @@
-import { HeadingGroup } from "components/Heading/Heading.Style";
+import { HeadingGroup } from "src/components/Heading/Heading.Style";
 import styled from "styled-components";
+
 
 export const SettingIcon = styled.div`
 
@@ -17,7 +18,7 @@ export const SettingGroups = styled.div`
 export const SettingGroup = styled.div`
    height: 100%;
    overflow-y: auto;
-   
+
    ::-webkit-scrollbar {
       display: none;
    }
@@ -26,7 +27,7 @@ export const SettingGroup = styled.div`
       color: inherit;
       text-decoration: none;
    }
-   
+
    ${HeadingGroup} {
       padding: 50px 0 24px;
       font-size: 24px;

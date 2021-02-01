@@ -1,4 +1,6 @@
+import { blackColor, blackestColor, mainColor, sixteen } from "src/theme/theme";
 import styled from "styled-components";
+
 
 export const InputUnderline = styled.input`
    padding: 3px 9px;
@@ -6,18 +8,18 @@ export const InputUnderline = styled.input`
    height: 24px;
    border: none;
    outline: none;
-   font-size: ${({theme}) => theme.sixteen};
+   font-size: ${sixteen};
    border-bottom-width: 2px;
    border-bottom-style: solid;
-   border-bottom-color: ${({theme}) => theme.grayColor};
+   border-bottom-color: ${blackColor};
    background: transparent;
-   
+
    &::placeholder {
-      color: ${({theme}) => theme.darkColor};
+      color: ${blackestColor};
    }
-   
+
    &:focus {
-      border-bottom-color: ${({theme}) => theme.primaryColor};
+      border-bottom-color: ${mainColor};
    }
 `;
 

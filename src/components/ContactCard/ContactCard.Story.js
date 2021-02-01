@@ -7,4 +7,4 @@ export default {
    component: ContactCard,
 };
 
-export const Default = (args) => <ContactCard {...args}/>;
+export const Default = args => <ContactCard {...args}/>;

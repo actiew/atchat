@@ -1,16 +1,20 @@
+import PropTypes from "prop-types";
+import React from "react";
 import {
    NoteCardGroup,
    NoteExcerpt,
    NoteImage,
    NotePublishTime,
    NoteTitle,
-} from "components/NoteCard/NoteCard.Style";
-import PropTypes from "prop-types";
-import React from "react";
+} from "src/components/NoteCard/NoteCard.Style";
 
-export const NoteCard = ({children, note, ...rest}) => (
+
+export const NoteCard = ({
+   note,
+   ...rest
+}) => (
    <NoteCardGroup {...rest}>
-      <NoteImage src={note.image}/>
+      <NoteImage src={`/static/images/${note.image}`}/>
       <NoteTitle>{note.title}</NoteTitle>
       <NoteExcerpt>{note.excerpt}</NoteExcerpt>
       <NotePublishTime>{note.publishedAt}</NotePublishTime>
@@ -18,7 +22,7 @@ export const NoteCard = ({children, note, ...rest}) => (
 );
 
 NoteCard.propTypes = {
-   children: PropTypes.any,
+   note: PropTypes.any,
 };
 
 NoteCard.defaultProps = {};

@@ -7,4 +7,4 @@ export default {
    component: InputText,
 };
 
-export const Default = (args) => <InputText {...args}/>;
+export const Default = args => <InputText {...args}/>;

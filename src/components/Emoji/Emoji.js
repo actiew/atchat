@@ -1,10 +1,17 @@
-import { EmojiGroup } from "components/Emoji/Emoji.Style";
 import PropTypes from "prop-types";
 import React from "react";
+import { EmojiGroup } from "src/components/Emoji/Emoji.Style";
 
-export const Emoji = ({children, label, ...rest}) => (
-   <EmojiGroup role={"img"} aria-label={label} {...rest}>
-       {children}
+
+export const Emoji = ({
+   children,
+   label,
+   ...rest
+}) => (
+   <EmojiGroup
+      role="img"
+      aria-label={label} {...rest}>
+      {children}
    </EmojiGroup>
 );
 

@@ -3,6 +3,7 @@
      xmlns="http://www.w3.org/2000/svg">
     <title>plus</title>
     <g id="plus" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-        <path d="M55,6 L55,46 L95,46 L95,55 L54.999,55 L55,95 L46,95 L45.999,55 L6,55 L6,46 L46,46 L46,6 L55,6 Z" id="形状结合" fill="#000000"></path>
+        <path d="M55,6 L55,46 L95,46 L95,55 L54.999,55 L55,95 L46,95 L45.999,55 L6,55 L6,46 L46,46 L46,6 L55,6 Z"
+              id="形状结合" fill="#000000"></path>
     </g>
 </svg>

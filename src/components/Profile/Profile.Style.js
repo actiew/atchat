@@ -1,14 +1,16 @@
-import { AvatarGroup } from "components/Avatar/Avatar.Style";
+import { AvatarGroup } from "src/components/Avatar/Avatar.Style";
 
-import { Icon } from "components/Icon/Icon";
-import { TextGroup } from "components/Text/Text.Style";
+import { Icon } from "src/components/Icon/Icon";
+import { TextGroup } from "src/components/Text/Text.Style";
+import { blackerColor, sixteen, whiterColor } from "src/theme/theme";
 import styled from "styled-components";
+
 
 export const SocialLinks = styled.div`
    display: flex;
    justify-content: space-between;
    margin: 15px 0;
-   
+
    & > * {
       margin: 0 9px;
    }
@@ -27,15 +29,15 @@ export const AlbumTitle = styled.div`
    align-items: center;
    justify-self: stretch;
    justify-content: space-between;
-   
+
    & > ${TextGroup} {
-      color: ${({theme}) => theme.grayColor};
+      color: ${blackerColor};
    }
-   
+
    & > a {
       display: flex;
       align-items: center;
-      font-size: ${({theme}) => theme.sixteen};
+      font-size: ${sixteen};
       text-decoration: none;
    }
 `;
@@ -55,7 +57,11 @@ export const Photo = styled.img`
    object-fit: cover;
 `;
 
-export const CloseIcon = styled(Icon).attrs({opacity: 0.9, width: "18px"})`
+export const CloseIcon = styled(Icon)
+.attrs({
+   opacity: 0.9,
+   width: "18px",
+})`
    position: absolute;
    top: 12px;
    right: 15px;
@@ -71,14 +77,10 @@ export const ProfileGroup = styled.div`
    position: relative;
    padding: 0 9px;
    height: 100%;
-   background: ${({theme}) => theme.lineColor};
+   background: ${whiterColor};
    overflow-y: auto;
-   
+
    ${AvatarGroup} {
       margin-top: 50px;
-   }
-   
-   &::-webkit-scrollbar {
-      display: none;
    }
 `;

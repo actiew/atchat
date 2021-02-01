@@ -1,6 +1,8 @@
-import ArrowDown from "resources/icon/arrow-down.svg";
-import Arrow_Down from "resources/icon/arrowdown.svg";
+import ArrowDown from "src/resources/icon/arrow-down.svg";
+import Arrow_Down from "src/resources/icon/arrowdown.svg";
+import { mainColor, sixteen } from "src/theme/theme";
 import styled, { css } from "styled-components";
+
 
 export const typeVariants = {
    form: css`
@@ -17,11 +19,11 @@ export const SelectGroup = styled.select`
    background-color: transparent;
    border: none;
    padding-right: 18px;
-   font-size: ${({theme}) => theme.sixteen};
-   color: ${({theme}) => theme.primaryColor};
+   font-size: ${sixteen};
+   color: ${mainColor};
    outline: none;
-   ${({type}) => type && typeVariants[type]};
-   
+   ${({ type }) => type && typeVariants[type]};
+
    ::-ms-expand {
       display: none;
    }

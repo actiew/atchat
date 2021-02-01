@@ -1,9 +1,14 @@
-import { LabelContainer } from "components/LabelContainer/LabelContainer";
-import { Circle, RadioButton, RadioGroup, RedioGroups } from "components/Radio/Radio.Style";
 import PropTypes from "prop-types";
 import React from "react";
+import { LabelContainer } from "src/components/LabelContainer/LabelContainer";
+import { Circle, RadioButton, RadioGroup, RedioGroups } from "src/components/Radio/Radio.Style";
 
-export const Radio = ({children, name, ...rest}) => (
+
+export const Radio = ({
+   children,
+   name,
+   ...rest
+}) => (
    <RadioGroup {...rest}>
       {children}
       <RadioButton name={name}/>
@@ -11,7 +16,11 @@ export const Radio = ({children, name, ...rest}) => (
    </RadioGroup>
 );
 
-export function Radios({label, children, ...rest}) {
+export function Radios ({
+   label,
+   children,
+   ...rest
+}) {
    return (
       <LabelContainer label={label} {...rest}>
          <RedioGroups>
@@ -21,9 +30,9 @@ export function Radios({label, children, ...rest}) {
    );
 }
 
-Radio.propTypes = {
+Radios.propTypes = {
    children: PropTypes.any,
-   name: PropTypes.string,
+   label: PropTypes.any,
 };
 
 Radio.defaultProps = {};

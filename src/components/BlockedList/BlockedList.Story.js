@@ -8,4 +8,4 @@ export default {
    component: BlockedList,
 };
 
-export const Default = (args) => <BlockedList {...args}/>;
+export const Default = args => <BlockedList {...args}/>;

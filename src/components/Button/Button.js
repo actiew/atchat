@@ -1,8 +1,18 @@
-import { ButtonGroup } from "components/Button/Button.Style";
 import PropTypes from "prop-types";
 import React from "react";
+import { ButtonGroup } from "src/components/Button/Button.Style";
 
-export const Button = ({children, type, shape, width, height, fontSize, backgroundColor, ...rest}) => (
+
+export const Button = ({
+   children,
+   type,
+   shape,
+   width,
+   height,
+   fontSize,
+   backgroundColor,
+   ...rest
+}) => (
    <ButtonGroup
       type={type}
       shape={shape}
@@ -12,20 +22,22 @@ export const Button = ({children, type, shape, width, height, fontSize, backgrou
       backgroundColor={backgroundColor}
       {...rest}
    >
-       {children}
+      {children}
    </ButtonGroup>
 );
 
 Button.propTypes = {
+   backgroundColor: PropTypes.any,
    children: PropTypes.any,
-   type: PropTypes.oneOf(["primary"]),
-   shape: PropTypes.oneOf(["circle", "rect"]),
-   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+   fontSize: PropTypes.any,
    height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+   shape: PropTypes.oneOf(["circle", "rect"]),
+   type: PropTypes.oneOf(["primary"]),
+   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Button.defaultProps = {
+   height: "30px",
    type: "primary",
    width: "30px",
-   height: "30px",
 };

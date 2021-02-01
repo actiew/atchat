@@ -10,7 +10,7 @@ export default {
    component: Icon,
 };
 
-const Template = (args) => <Icon {...args}/>;
+const Template = args => <Icon {...args}/>;
 
 export const Message = Template.bind({});
 Message.args = {

@@ -1,13 +1,17 @@
-import { AvatarGroup } from "components/Avatar/Avatar.Style";
-import { ButtonGroup } from "components/Button/Button.Style";
+import { AvatarGroup } from "src/components/Avatar/Avatar.Style";
+import { ButtonGroup } from "src/components/Button/Button.Style";
 
-import { Text } from "components/Text/Text";
+import { Text } from "src/components/Text/Text";
+import { twenty } from "src/theme/theme";
 import styled from "styled-components";
 
-export const TitleGroup = styled(Text).attrs({size: "twenty"})`
+
+export const TitleGroup = styled(Text)
+.attrs({ size: twenty })`
    display: block;
    align-self: end;
-   :nth-of-type(n+2) {
+
+   &:nth-of-type(n+2) {
       margin-top: 30px;
    }
 `;
@@ -19,11 +23,12 @@ export const SelectGroups = styled.div`
 
 export const InformationGroup = styled.div`
    overflow-y: auto;
-   
+
    ::-webkit-scrollbar {
       display: none;
-   };
-   
+   }
+;
+
    & > label {
       margin: 20px 0;
    }
@@ -36,7 +41,8 @@ export const ButtonGroups = styled.div`
 
    ${ButtonGroup} {
       justify-self: center;
-   };
+   }
+;
 `;
 
 export const EditProfileGroup = styled.div`
@@ -46,8 +52,9 @@ export const EditProfileGroup = styled.div`
    row-gap: 20px;
    height: 100%;
    overflow: hidden;
-   
+
    ${AvatarGroup} {
       justify-self: center;
-   };
+   }
+;
 `;

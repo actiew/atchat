@@ -7,4 +7,4 @@ export default {
    component: ChatApp,
 };
 
-export const Default = (args) => <ChatApp {...args}/>;
+export const Default = args => <ChatApp {...args}/>;

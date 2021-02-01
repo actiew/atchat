@@ -8,4 +8,4 @@ export default {
    component: Badge,
 };
 
-export const Default = (args) => <Badge {...args}/>;
+export const Default = args => <Badge {...args}/>;

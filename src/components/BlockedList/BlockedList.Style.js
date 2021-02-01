@@ -1,14 +1,17 @@
-import { Avatar } from "components/Avatar/Avatar";
-import { Button } from "components/Button/Button";
-import { IconGroup } from "components/Icon/Icon.Style";
-import { Text } from "components/Text/Text";
+import { Avatar } from "src/components/Avatar/Avatar";
+import { Button } from "src/components/Button/Button";
+import { IconGroup } from "src/components/Icon/Icon.Style";
+import { Text } from "src/components/Text/Text";
+import { twenty } from "src/theme/theme";
 import styled from "styled-components";
+
 
 export const BlockedAvatar = styled(Avatar)`
    grid-area: avatar;
 `;
 
-export const BlockedName = styled(Text).attrs({size: "twenty"})`
+export const BlockedName = styled(Text)
+.attrs({ size: twenty })`
    margin: 20px 0 0;
    grid-area: name;
 `;
@@ -36,7 +39,7 @@ export const FriendList = styled.div`
    row-gap: 24px;
    justify-items: center;
    overflow-y: auto;
-   
+
    ::-webkit-scrollbar {
       display: none;
    }
@@ -48,7 +51,7 @@ export const SettingMenu = styled.div`
    justify-content: center;
    position: relative;
    height: 108px;
-   
+
    ${IconGroup} {
       position: absolute;
       left: 0;

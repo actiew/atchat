@@ -1,4 +1,6 @@
+import { mainColor, whiteColor } from "src/theme/theme";
 import styled, { css } from "styled-components";
+
 
 export const Nav = styled.nav`
    flex-shrink: 0;
@@ -12,7 +14,7 @@ export const Sidebar = styled.aside`
    max-width: 448px;
    height: 100%;
    z-index: 50;
-   
+
    & > div {
       position: absolute;
       will-change: transform, opacity;
@@ -22,10 +24,10 @@ export const Sidebar = styled.aside`
 `;
 
 export const Content = styled.main`
-   position:relative;
+   position: relative;
    flex: 2;
-   border-left: 1px solid ${({theme}) => theme.lineColor};
-   border-right: 1px solid ${({theme}) => theme.lineColor};
+   border-left: 1px solid ${whiteColor};
+   border-right: 1px solid ${whiteColor};
 `;
 
 export const Drawer = styled.div`
@@ -34,12 +36,12 @@ export const Drawer = styled.div`
    transform: translateX(200px);
    transition: 0.3s transform;
    will-change: width, transform;
-   ${({show}) => show
-   && css`
+   ${({ show }) => show
+      && css`
          width: initial;
          transform: translateX(0);
       `
-};
+   };
 `;
 
 export const ChatAppGroup = styled.div`
@@ -48,6 +50,6 @@ export const ChatAppGroup = styled.div`
    position: relative;
    width: 90vw;
    height: 90vh;
-   border: 1px solid ${({theme}) => theme.darkColor};
+   border: 1px solid ${mainColor};
    overflow: hidden;
 `;

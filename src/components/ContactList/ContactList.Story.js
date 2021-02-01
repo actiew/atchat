@@ -7,4 +7,4 @@ export default {
    component: ContactList,
 };
 
-export const Default = (args) => <ContactList {...args}/>;
+export const Default = args => <ContactList {...args}/>;

@@ -8,4 +8,4 @@ export default {
    component: EditProfile,
 };
 
-export const Default = (args) => <EditProfile {...args}/>;
+export const Default = args => <EditProfile {...args}/>;

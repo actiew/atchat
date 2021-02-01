@@ -8,4 +8,4 @@ export default {
    component: FilterList,
 };
 
-export const Default = (args) => <FilterList {...args}/>;
+export const Default = args => <FilterList {...args}/>;

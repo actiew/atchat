@@ -1,11 +1,23 @@
-import { IconGroup } from "components/Icon/Icon.Style";
-
-import { SocialIcon } from "components/Icon/SocialIcon/SocialIcon";
 import PropTypes from "prop-types";
 import React from "react";
+import { IconGroup } from "src/components/Icon/Icon.Style";
 
-export const Icon = ({icon: IconComponent, width, height, color, opacity, ...rest}) => (
-   <IconGroup width={width} height={height} color={color} opacity={opacity} {...rest}>
+import { SocialIcon } from "src/components/Icon/SocialIcon/SocialIcon";
+
+
+export const Icon = ({
+   icon: IconComponent,
+   width,
+   height,
+   color,
+   opacity,
+   ...rest
+}) => (
+   <IconGroup
+      width={width}
+      height={height}
+      color={color}
+      opacity={opacity} {...rest}>
       {IconComponent && <IconComponent/>}
    </IconGroup>
 );
@@ -13,14 +25,14 @@ export const Icon = ({icon: IconComponent, width, height, color, opacity, ...res
 Icon.Social = SocialIcon;
 
 Icon.propTypes = {
-   icon: PropTypes.element,
-   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
-   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
    color: PropTypes.string,
+   height: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
+   icon: PropTypes.element,
    opacity: PropTypes.number,
+   width: PropTypes.oneOfType([PropTypes.string, PropTypes.number]),
 };
 
 Icon.defaultProps = {
-   width: "36px",
    height: "36px",
+   width: "36px",
 };

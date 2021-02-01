@@ -10,9 +10,12 @@ export default {
 };
 
 export const Default = () => (
-   <Footer style={{marginTop: "80px"}}/>
+   <Footer style={{ marginTop: "80px" }}/>
 );
 
 export const Po = () => (
-   <Popover content={<PopoverContent/>} style={{marginTop: "90px"}}>点我</Popover>
+   <Popover
+      content={<PopoverContent/>}
+      style={{ marginTop: "90px" }}
+   >点我</Popover>
 );

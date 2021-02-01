@@ -1,4 +1,6 @@
+import { mainColor, sixteen } from "src/theme/theme";
 import styled from "styled-components";
+
 
 export const Circle = styled.span`
    position: absolute;
@@ -7,9 +9,9 @@ export const Circle = styled.span`
    width: 16px;
    height: 16px;
    line-height: 16px;
-   border: 1px solid ${({theme}) => theme.primaryColor};
+   border: 1px solid ${mainColor};
    border-radius: 50%;
-   
+
    ::after {
       content: "";
       position: absolute;
@@ -18,23 +20,23 @@ export const Circle = styled.span`
       width: 12px;
       height: 12px;
       border-radius: 50%;
-      background: ${({theme}) => theme.primaryColor};
+      background: ${mainColor};
       opacity: 0;
       transform: scale(0.5);
       transition: 0.1s ease-in-out;
    }
 `;
 
-export const RadioButton = styled.input.attrs({type: "radio"})`
+export const RadioButton = styled.input.attrs({ type: "radio" })`
    width: 0;
    height: 0;
    opacity: 0;
-   
+
    :checked + ${Circle}::after {
       opacity: 1;
       transform: scale(1);
    }
-   
+
    :not(:checked) + ${Circle}::after {
       opacity: 0;
       transform: scale(0.5);
@@ -51,7 +53,7 @@ export const RadioGroup = styled.label`
    align-items: center;
    position: relative;
    padding-left: 24px;
-   font-size: ${({theme}) => theme.sixteen};
+   font-size: ${sixteen};
    line-height: 18px;
-   cursor:pointer;
+   cursor: pointer;
 `;

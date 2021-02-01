@@ -1,18 +1,25 @@
-import { Avatar } from "components/Avatar/Avatar";
-import { ContactCardGroup, Intro, Name } from "components/ContactCard/ContactCard.Style";
 import PropTypes from "prop-types";
 import React from "react";
+import { Avatar } from "src/components/Avatar/Avatar";
+import { ContactCardGroup, Intro, Name } from "src/components/ContactCard/ContactCard.Style";
 
-export const ContactCard = ({children, contact, ...rest}) => (
+
+export const ContactCard = ({
+   contact,
+   ...rest
+}) => (
    <ContactCardGroup {...rest}>
-      <Avatar src={contact.avatar} status={contact.status}/>
+      <Avatar
+         src={`/static/images/${contact.avatar}`}
+         status={contact.status}
+      />
       <Name>{contact.name}</Name>
       <Intro>{contact.intro}</Intro>
    </ContactCardGroup>
 );
 
 ContactCard.propTypes = {
-   children: PropTypes.any,
+   contact: PropTypes.string,
 };
 
 ContactCard.defaultProps = {};

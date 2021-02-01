@@ -22,12 +22,12 @@ const dropdownContent = (
          <Paragraph>关闭此会话</Paragraph>
       </DropdownItem>
       <DropdownItem>
-         <Paragraph type={"danger"}>屏蔽此好友</Paragraph>
+         <Paragraph type="danger">屏蔽此好友</Paragraph>
       </DropdownItem>
    </>
 );
 
-export const Default = (args) => (
+export const Default = args => (
    <Dropdown content={dropdownContent} {...args}>
       <Icon icon={DotIcon}/>
    </Dropdown>

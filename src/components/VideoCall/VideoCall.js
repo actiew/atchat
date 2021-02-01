@@ -1,6 +1,8 @@
-import { Avatar } from "components/Avatar/Avatar";
-import { Icon } from "components/Icon/Icon";
-import { Paragraph } from "components/Paragraph/Paragraph";
+import PropTypes from "prop-types";
+import React, { useState } from "react";
+import { Avatar } from "src/components/Avatar/Avatar";
+import { Icon } from "src/components/Icon/Icon";
+import { Paragraph } from "src/components/Paragraph/Paragraph";
 import {
    Action,
    Actions,
@@ -8,57 +10,82 @@ import {
    Self,
    VideoCallAlert,
    VideoCallGroup,
-} from "components/VideoCall/VideoCall.Style";
-import PropTypes from "prop-types";
-import React, { useState } from "react";
+} from "src/components/VideoCall/VideoCall.Style";
 
-import { ReactComponent as CompressIcon } from "resources/icon/compress.svg";
-import { ReactComponent as PhoneSlashIcon } from "resources/icon/phoneslash.svg";
-import { ReactComponent as VideoIcon } from "resources/icon/video.svg";
-import { ReactComponent as VoiceIcon } from "resources/icon/voice.svg";
-import { ReactComponent as VolumeMuteIcon } from "resources/icon/volumemute.svg";
-import Avatar004 from "resources/images/avatar004.png";
-import Avatar005 from "resources/images/avatar005.png";
-import VideoCallImage from "resources/images/videocall.png";
+import { ReactComponent as CompressIcon } from "src/resources/icon/compress.svg";
+import { ReactComponent as PhoneSlashIcon } from "src/resources/icon/phoneslash.svg";
+import { ReactComponent as VideoIcon } from "src/resources/icon/video.svg";
+import { ReactComponent as VoiceIcon } from "src/resources/icon/voice.svg";
+import { ReactComponent as VolumeMuteIcon } from "src/resources/icon/volumemute.svg";
+import Avatar002 from "src/resources/images/avatar002.png";
+import VideoCallImage from "src/resources/images/videocall.png";
 
-import theme from "theme";
+import { redColor, whitestColor } from "src/theme/theme";
 
-export function VideoCall({children, onHangOffClicked, ...rest}) {
+
+export function VideoCall ({
+   onHangOffClicked,
+   ...rest
+}) {
    const [fullScreen, setFullScreen] = useState(true);
-   if ( !fullScreen ) {
+   if (!fullScreen) {
       return (
          <VideoCallAlert onClick={() => setFullScreen(true)}>
-            <Avatar src={Avatar004} size={69}/>
-            <Paragraph size={"eighteen"}>正在跟 实视 进行视频通话</Paragraph>
-            <Paragraph type={"normal"}>点击切换全屏</Paragraph>
-            <Icon icon={VideoIcon} width={"36px"} height={"20px"}/>
+            <Avatar
+               src={Avatar002}
+               size={69}
+            />
+            <Paragraph size="eighteen">正在跟 实视 进行视频通话</Paragraph>
+            <Paragraph type="normal">点击切换全屏</Paragraph>
+            <Icon
+               icon={VideoIcon}
+               width="36px"
+               height="20px"
+            />
          </VideoCallAlert>
       );
    }
-   
+
    return (
       <VideoCallGroup src={VideoCallImage} {...rest}>
-         <Minimize shape={"rect"} onClick={() => setFullScreen(false)}>
-            <Icon icon={CompressIcon} color={theme.whiteColor}/>
+         <Minimize
+            shape="rect"
+            onClick={() => setFullScreen(false)}
+         >
+            <Icon
+               icon={CompressIcon}
+               color={whitestColor}
+            />
          </Minimize>
          <Actions>
             <Action>
-               <Icon icon={VoiceIcon} color={theme.whiteColor}/>
+               <Icon
+                  icon={VoiceIcon}
+                  color={whitestColor}
+               />
             </Action>
-            <Action backgroundColor={theme.redColor}>
-               <Icon icon={PhoneSlashIcon} color={theme.whiteColor} onClick={onHangOffClicked}/>
+            <Action backgroundColor={redColor}>
+               <Icon
+                  icon={PhoneSlashIcon}
+                  color={whitestColor}
+                  onClick={onHangOffClicked}
+               />
             </Action>
             <Action>
-               <Icon icon={VolumeMuteIcon} color={theme.whiteColor}/>
+               <Icon
+                  icon={VolumeMuteIcon}
+                  color={whitestColor}
+               />
             </Action>
          </Actions>
-         <Self src={Avatar005} size={99}/>
+         <Self
+            src={Avatar002}
+            size={99}
+         />
       </VideoCallGroup>
    );
 }
 
 VideoCall.propTypes = {
-   children: PropTypes.any,
+   onHangOffClicked: PropTypes.any,
 };
-
-VideoCall.defaultProps = {};

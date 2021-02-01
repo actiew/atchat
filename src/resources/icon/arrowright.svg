@@ -1,14 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <svg width="100px" height="100px" viewBox="0 0 100 100" version="1.1"
      xmlns="http://www.w3.org/2000/svg">
-   <title>arrowright</title>
-   <g id="arrowright" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-      <g id="ic-outline-double-arrow" transform="translate(30.000000, 20.000000)" fill="#000000"
-         fill-rule="nonzero">
-         <g id="Icon">
-            <polygon id="Icon-路径"
-                     points="19.5833333 0.833333333 0.833333333 0.833333333 21.6666667 30 0.833333333 59.1666667 19.5833333 59.1666667 40.4166667 30"></polygon>
-         </g>
-      </g>
-   </g>
+    <title>arrowright</title>
+    <g id="arrowright" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ic-outline-double-arrow" transform="translate(30.000000, 20.000000)"
+           fill="#000000"
+           fill-rule="nonzero">
+            <g id="Icon">
+                <polygon id="Icon-路径"
+                         points="19.5833333 0.833333333 0.833333333 0.833333333 21.6666667 30 0.833333333 59.1666667 19.5833333 59.1666667 40.4166667 30"></polygon>
+            </g>
+        </g>
+    </g>
 </svg>

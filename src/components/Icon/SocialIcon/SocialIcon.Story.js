@@ -7,4 +7,4 @@ export default {
    component: SocialIcon,
 };
 
-export const Default = (args) => <SocialIcon {...args}/>;
+export const Default = args => <SocialIcon {...args}/>;

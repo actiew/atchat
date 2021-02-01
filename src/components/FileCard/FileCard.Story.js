@@ -8,4 +8,4 @@ export default {
    component: FileCard,
 };
 
-export const Default = (args) => <FileCard {...args}/>;
+export const Default = args => <FileCard {...args}/>;

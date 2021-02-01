@@ -8,4 +8,4 @@ export default {
    component: Conversation,
 };
 
-export const Default = (args) => <Conversation {...args}/>;
+export const Default = args => <Conversation {...args}/>;

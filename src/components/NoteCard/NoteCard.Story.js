@@ -8,4 +8,4 @@ export default {
    component: NoteCard,
 };
 
-export const Default = (args) => <NoteCard {...args}/>;
+export const Default = args => <NoteCard {...args}/>;

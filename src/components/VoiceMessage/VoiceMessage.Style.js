@@ -1,22 +1,24 @@
-import { ButtonGroup } from "components/Button/Button.Style";
-import { IconGroup } from "components/Icon/Icon.Style";
-import { TextGroup } from "components/Text/Text.Style";
+import { ButtonGroup } from "src/components/Button/Button.Style";
+import { IconGroup } from "src/components/Icon/Icon.Style";
+import { TextGroup } from "src/components/Text/Text.Style";
+import { mainColor, whitestColor } from "src/theme/theme";
 import styled, { css } from "styled-components";
+
 
 export const typeVariants = {
    mine: css`
-      background: ${({theme}) => theme.primaryColor};
-      
+      background: ${mainColor};
+
       & > ${IconGroup} {
-         fill: ${({theme}) => theme.whiteColor}
+         fill: ${whitestColor}
       }
-      
+
       & > ${IconGroup} path {
-         fill: ${({theme}) => theme.whiteColor};
+         fill: ${whitestColor};
       }
-      
+
       & > ${TextGroup} {
-         color: ${({theme}) => theme.whiteColor};
+         color: ${whitestColor};
       }
    `,
 };
@@ -25,23 +27,23 @@ export const VoiceMessageGroup = styled.div`
    & > ${ButtonGroup} {
       display: grid;
       grid-template-columns: 40px 1fr 60px;
-      background: #AAA;
+      background: #AAAAAA;
       padding: 0;
-      
+
       & > *:nth-child(2) {
          flex-shrink: 0;
          margin: 0 6px;
-         
+
          svg {
             width: 100%;
             height: 32px;
          }
       }
-      
+
       & > ${TextGroup} {
-         color: ${({theme}) => theme.primaryColor};
+         color: ${mainColor};
       }
-      
-      ${({type}) => type && typeVariants[type]};
+
+      ${({ type }) => type && typeVariants[type]};
    }
 `;

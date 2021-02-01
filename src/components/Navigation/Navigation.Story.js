@@ -8,4 +8,4 @@ export default {
    component: Navigation,
 };
 
-export const Nav = (args) => <Navigation {...args}/>;
+export const Nav = args => <Navigation {...args}/>;
